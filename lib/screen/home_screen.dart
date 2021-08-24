@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marketplace/model/bicycle.dart';
+import 'package:marketplace/screen/cart_screen.dart';
 import 'package:marketplace/screen/detail_screen.dart';
+import 'package:marketplace/screen/info_screen.dart';
 import 'package:marketplace/util/widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,7 +35,11 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return InfoScreen();
+              }));
+            },
             icon: Icon(
               Icons.person_outline,
               color: Colors.black,
